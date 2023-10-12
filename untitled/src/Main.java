@@ -18,7 +18,7 @@ public class Main {
         int opcao;
 
         do {
-            System.out.println("Escolha uma opção: 1 - Cadastrar livro / 2 - Listar livros / 0 - Voltar ao menu anterior");
+            System.out.println("Escolha uma opção: 1 - Cadastrar livro / 2 - Listar livros / 0 - sair");
             opcao = scanner.nextInt();
 
             switch (opcao){
@@ -38,7 +38,7 @@ public class Main {
                     System.out.print("Digite o preço do livro: ");
                     novoLivro.preco = scanner.nextFloat();
 
-                    System.out.print("Digite a data de Lançamento do livro: (dd/MM/yyy) ");
+                    System.out.print("Digite a data de Lançamento do livro: (dd/MM/yyyy) ");
                     LocalDate date = LocalDate.parse(scanner.next(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
 
                     Period periodo = Period.between(date, LocalDate.now());
